@@ -1,0 +1,223 @@
+{
+	"folders": [],
+	"settings": {
+		"C_Cpp.default.includePath": [
+			"${workspaceFolder}/**",
+			"C:\\WinDDK\\7600.16385.1\\inc\\api\\crt\\stl60",
+			"C:\\WinDDK\\7600.16385.1\\inc\\api",
+			"C:\\WinDDK\\7600.16385.1\\inc",
+			"C:\\WinDDK\\7600.16385.1\\inc\\crt",
+			"C:\\WinDDK\\7600.16385.1\\inc\\ddk",
+			"C:\\WinDDK\\7600.16385.1\\inc\\wdf\\kmdf",
+			"C:\\WinDDK\\7600.16385.1\\inc\\mfc42",
+			"C:\\WinDDK\\7600.16385.1\\inc\\api"
+		],
+		"C_Cpp.default.intelliSenseMode": "windows-msvc-x64"
+	},
+	"launch": {
+		// 使用 IntelliSense 了解相关属性。 
+		// 悬停以查看现有属性的描述。
+		// 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "link.exe - 生成和调试活动文件 (no resource)",
+				"type": "cppvsdbg",
+				"request": "launch",
+				"program": "${workspaceFolder}\\build\\debug\\${fileBasenameNoExtension}.exe",
+				"args": [],
+				"stopAtEntry": false,
+				"cwd": "${workspaceFolder}",
+				"environment": [],
+				"console": "integratedTerminal",
+				"preLaunchTask": "C/C++: link.exe 生成活动文件 (debug) (no resource)"
+			},
+			{
+				"name": "link.exe - 生成和调试活动文件 (with resource)",
+				"type": "cppvsdbg",
+				"request": "launch",
+				"program": "${workspaceFolder}\\build\\debug\\${fileBasenameNoExtension}.exe",
+				"args": [],
+				"stopAtEntry": false,
+				"cwd": "${workspaceFolder}",
+				"environment": [],
+				"console": "integratedTerminal",
+				"preLaunchTask": "C/C++: link.exe 生成活动文件 (debug) (with resource)"
+			}
+		],
+		"compounds": []
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"options": {
+			"env": {
+				"Include":"C:\\WinDDK\\7600.16385.1\\inc\\api\\crt\\stl60;C:\\WinDDK\\7600.16385.1\\inc\\api;C:\\WinDDK\\7600.16385.1\\inc;C:\\WinDDK\\7600.16385.1\\inc\\crt;C:\\WinDDK\\7600.16385.1\\inc\\ddk;C:\\WinDDK\\7600.16385.1\\inc\\wdf\\kmdf;C:\\WinDDK\\7600.16385.1\\inc\\mfc42;C:\\WinDDK\\7600.16385.1\\inc\\api",
+				"Lib":"C:\\WinDDK\\7600.16385.1\\lib;C:\\WinDDK\\7600.16385.1\\lib\\atl\\amd64;C:\\WinDDK\\7600.16385.1\\lib\\crt\\amd64;C:\\WinDDK\\7600.16385.1\\lib\\win7\\amd64;C:\\WinDDK\\7600.16385.1\\lib\\wdf\\kmdf\\amd64\\1.9;C:\\WinDDK\\7600.16385.1\\lib\\mfc\\amd64"
+			}
+		},
+		"presentation": {
+			"echo": true,
+			"reveal": "silent",
+			"focus": false,
+			"panel": "shared",
+			"showReuseMessage": true,
+			"clear": true
+		},
+		"tasks": [
+			{
+				"type": "process",
+				"label": "C/C++: link.exe 生成活动文件 (debug) (no resource)",
+				"command": "C:\\WinDDK\\7600.16385.1\\bin\\x86\\amd64\\link.exe",
+				"args": [
+					"/DEBUG",
+					"/OUT:${workspaceFolder}\\build\\debug\\${fileBasenameNoExtension}.exe",
+					"user32.lib",
+					"${workspaceFolder}\\build\\debug\\${fileBasenameNoExtension}.obj"
+				],
+				"options": {
+					"cwd": "${workspaceFolder}\\build\\debug"
+				},
+				"problemMatcher": [
+					"$msCompile"
+				],
+				"group": "build",
+				"detail": "生成器: link.exe",
+				"dependsOn":[
+					"C/C++: cl.exe compile source (debug)"
+				]
+			},
+			{
+				"type": "process",
+				"label": "C/C++: link.exe 生成活动文件 (debug) (with resource)",
+				"command": "C:\\WinDDK\\7600.16385.1\\bin\\x86\\amd64\\link.exe",
+				"args": [
+					"/DEBUG",
+					"/OUT:${workspaceFolder}\\build\\debug\\${fileBasenameNoExtension}.exe",
+					"user32.lib",
+					"${workspaceFolder}\\build\\debug\\${fileBasenameNoExtension}.obj",
+					"${workspaceFolder}\\build\\${fileBasenameNoExtension}.res"
+				],
+				"options": {
+					"cwd": "${workspaceFolder}\\build\\debug"
+				},
+				"problemMatcher": [
+					"$msCompile"
+				],
+				"group": "build",
+				"detail": "生成器: link.exe",
+				"dependsOn":[
+					"C/C++: cl.exe compile source (debug)",
+					"C/C++: rc.exe compile resource"
+				],
+				"dependsOrder": "sequence"
+			},
+			{
+				"type": "process",
+				"label": "C/C++: link.exe 生成活动文件 (release) (no resource)",
+				"command": "C:\\WinDDK\\7600.16385.1\\bin\\x86\\amd64\\link.exe",
+				"args": [
+					"/OUT:${workspaceFolder}\\build\\release\\${fileBasenameNoExtension}.exe",
+					"user32.lib",
+					"${workspaceFolder}\\build\\release\\${fileBasenameNoExtension}.obj"
+				],
+				"options": {
+					"cwd": "${workspaceFolder}\\build\\release"
+				},
+				"problemMatcher": [
+					"$msCompile"
+				],
+				"group": "build",
+				"detail": "生成器: link.exe",
+				"dependsOn":[
+					"C/C++: cl.exe compile source (release)"
+				]
+			},
+			{
+				"type": "process",
+				"label": "C/C++: link.exe 生成活动文件 (release) (with resource)",
+				"command": "C:\\WinDDK\\7600.16385.1\\bin\\x86\\amd64\\link.exe",
+				"args": [
+					"/OUT:${workspaceFolder}\\build\\release\\${fileBasenameNoExtension}.exe",
+					"user32.lib",
+					"${workspaceFolder}\\build\\release\\${fileBasenameNoExtension}.obj",
+					"${workspaceFolder}\\build\\${fileBasenameNoExtension}.res"
+				],
+				"options": {
+					"cwd": "${workspaceFolder}\\build\\release"
+				},
+				"problemMatcher": [
+					"$msCompile"
+				],
+				"group": "build",
+				"detail": "生成器: link.exe",
+				"dependsOn":[
+					"C/C++: cl.exe compile source (release)",
+					"C/C++: rc.exe compile resource"
+				],
+				"dependsOrder": "sequence"
+			},
+			{
+				"type": "process",
+				"label": "C/C++: cl.exe compile source (debug)",
+				"command": "C:\\WinDDK\\7600.16385.1\\bin\\x86\\amd64\\cl.exe",
+				"args": [
+					"/c",
+					"/D",
+					"_DEBUG",
+					"/D",
+					"_UNICODE",
+					"/D",
+					"UNICODE",
+					//"/clr", (need dll)
+					//"/D",
+					//"nullptr=0",
+					"/EHsc",
+					// "/MDd",(need msvcrtd.dll msvcp60d.dll)
+					"/Zi",
+					"/Fe${workspaceFolder}\\build\\debug\\${fileBasenameNoExtension}.obj",
+					"${file}"
+				],
+				"options": {
+					"cwd": "${workspaceFolder}\\build\\debug"
+				}
+			},
+			{
+				"type": "process",
+				"label": "C/C++: cl.exe compile source (release)",
+				"command": "C:\\WinDDK\\7600.16385.1\\bin\\x86\\amd64\\cl.exe",
+				"args": [
+					"/c",
+					"/D",
+					"_UNICODE",
+					"/D",
+					"UNICODE",
+					//"/clr", (need dll)
+					//"/D",
+					//"nullptr=0",
+					"/EHsc",
+					"/MD",
+					"/O2",
+					"/Oi",
+					"/Fe${workspaceFolder}\\build\\release\\${fileBasenameNoExtension}.obj",
+					"${file}"
+				],
+				"options": {
+					"cwd": "${workspaceFolder}\\build\\release"
+				}
+			},
+			{
+				"type": "process",
+				"label": "C/C++: rc.exe compile resource",
+				"command": "C:\\WinDDK\\7600.16385.1\\bin\\x86\\rc.exe",
+				"args": [
+					"/fo",
+					"${workspaceFolder}\\build\\${fileBasenameNoExtension}.res",
+					"${fileDirname}\\${fileBasenameNoExtension}.rc"
+				],
+				"options": {
+					"cwd": "${workspaceFolder}\\build"
+				}
+			}
+		]
+	}
+}

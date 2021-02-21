@@ -1,0 +1,310 @@
+{
+	"folders": [
+		{
+			"path": "cpp\\test"
+		},
+		{
+			"path": "cpp\\exectools"
+		}
+	],
+	"launch": {
+		// 使用 IntelliSense 了解相关属性。 
+		// 悬停以查看现有属性的描述。
+		// 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "g++.exe - 生成和调试活动文件",
+				"type": "cppdbg",
+				"request": "launch",
+				"program": "${fileDirname}\\target\\${fileBasenameNoExtension}.exe",
+				"args": [],
+				"stopAtEntry": false,
+				"cwd": "${fileDirname}\\target",
+				"environment": [
+					/*
+					{
+						"name": "Path",
+						"value": "${env:Path};C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin"
+					}
+					*/
+				],
+				"externalConsole": false,
+				"MIMode": "gdb",
+				"miDebuggerPath": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\gdb.exe",
+				"setupCommands": [
+					{
+						"description": "为 gdb 启用整齐打印",
+						"text": "-enable-pretty-printing",
+						"ignoreFailures": true
+					}
+				],
+				"preLaunchTask": "C/C++: g++.exe build active file"
+			},
+			{
+				"name": "g++.exe - 生成和调试活动文件 - win",
+				"type": "cppdbg",
+				"request": "launch",
+				"program": "${fileDirname}\\target\\${fileBasenameNoExtension}.exe",
+				"args": [],
+				"stopAtEntry": false,
+				"cwd": "${fileDirname}\\target",
+				"environment": [
+					/*
+					{
+						"name": "Path",
+						"value": "${env:Path};C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin"
+					}
+					*/
+				],
+				"externalConsole": false,
+				"MIMode": "gdb",
+				"miDebuggerPath": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\gdb.exe",
+				"setupCommands": [
+					{
+						"description": "为 gdb 启用整齐打印",
+						"text": "-enable-pretty-printing",
+						"ignoreFailures": true
+					}
+				],
+				"preLaunchTask": "C/C++: g++.exe build active file - win"
+			},
+			{
+				"name": "g++.exe - 生成和调试活动文件 - win - res",
+				"type": "cppdbg",
+				"request": "launch",
+				"program": "${fileDirname}\\target\\${fileBasenameNoExtension}.exe",
+				"args": [],
+				"stopAtEntry": false,
+				"cwd": "${fileDirname}\\target",
+				"environment": [
+					/*
+					{
+						"name": "Path",
+						"value": "${env:Path};C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin"
+					}
+					*/
+				],
+				"externalConsole": false,
+				"MIMode": "gdb",
+				"miDebuggerPath": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\gdb.exe",
+				"setupCommands": [
+					{
+						"description": "为 gdb 启用整齐打印",
+						"text": "-enable-pretty-printing",
+						"ignoreFailures": true
+					}
+				],
+				"preLaunchTask": "C/C++: g++.exe build active file - win - res"
+			}
+		]
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"type": "process",
+				"label": "C/C++: g++.exe build active file",
+				"command": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+				"args": [
+					//"-static",
+					"-g",
+					"${file}",
+					"-o",
+					"${fileDirname}\\target\\${fileBasenameNoExtension}.exe"
+				],
+				"options": {
+					"cwd": "${fileDirname}\\target"
+				},
+				"problemMatcher": [
+					"$gcc"
+				],
+				"group": "build"
+			},
+			{
+				"type": "process",
+				"label": "C/C++: g++.exe build active file - release",
+				"command": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+				"args": [
+					//"-static",
+					"-O3",
+					"-s",
+					"${file}",
+					"-o",
+					"${fileDirname}\\target\\${fileBasenameNoExtension}.exe"
+				],
+				"options": {
+					"cwd": "${fileDirname}\\target"
+				},
+				"problemMatcher": [
+					"$gcc"
+				],
+				"group": "build"
+			},
+			{
+				"type": "process",
+				"label": "C/C++: g++.exe build active file - win",
+				"command": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+				"args": [
+					//"-static",
+					"-mwindows",
+					"-municode",
+					"-g",
+					"${file}",
+					"-o",
+					"${fileDirname}\\target\\${fileBasenameNoExtension}.exe"
+				],
+				"options": {
+					"cwd": "${fileDirname}\\target"
+				},
+				"problemMatcher": [
+					"$gcc"
+				],
+				"group": "build"
+			},
+			{
+				"type": "process",
+				"label": "C/C++: g++.exe build active file - win - res",
+				"command": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+				"args": [
+					//"-static",
+					"-mwindows",
+					"-municode",
+					"-g",
+					"${file}",
+					"${fileDirname}\\target\\${fileBasenameNoExtension}.res",
+					"-o",
+					"${fileDirname}\\target\\${fileBasenameNoExtension}.exe"
+				],
+				"options": {
+					"cwd": "${fileDirname}\\target"
+				},
+				"problemMatcher": [
+					"$gcc"
+				],
+				"group": "build",
+				"dependsOn": [
+					"C/C++: windres.exe compile resource"
+				]
+			},
+			{
+				"type": "process",
+				"label": "C/C++: g++.exe build active file - win  - release",
+				"command": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+				"args": [
+					//"-static",
+					"-O3",
+					"-s",
+					"-mwindows",
+					"-municode",
+					"${file}",
+					"-o",
+					"${fileDirname}\\target\\${fileBasenameNoExtension}.exe"
+				],
+				"options": {
+					"cwd": "${fileDirname}\\target"
+				},
+				"problemMatcher": [
+					"$gcc"
+				],
+				"group": "build"
+			},
+			{
+				"type": "process",
+				"label": "C/C++: g++.exe build active file - win - res - release",
+				"command": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+				"args": [
+					//"-static",
+					"-O3",
+					"-s",
+					"-mwindows",
+					"-municode",
+					"${file}",
+					"${fileDirname}\\target\\${fileBasenameNoExtension}.res",
+					"-o",
+					"${fileDirname}\\target\\${fileBasenameNoExtension}.exe"
+				],
+				"options": {
+					"cwd": "${fileDirname}\\target"
+				},
+				"problemMatcher": [
+					"$gcc"
+				],
+				"group": "build",
+				"dependsOn": [
+					"C/C++: windres.exe compile resource"
+				]
+			},
+			{
+				"type": "process",
+				"label": "C/C++: windres.exe compile resource",
+				"command": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\windres.exe",
+				"args": [
+					"-i",
+					"${fileDirname}\\${fileBasenameNoExtension}.rc",
+					"-o",
+					"${fileDirname}\\target\\${fileBasenameNoExtension}.res",
+					"-J",
+					"rc",
+					"-O",
+					"coff"
+				],
+				"options": {
+					"cwd": "${fileDirname}\\target"
+				},
+				"problemMatcher": [
+					"$gcc"
+				],
+				"group": "build"
+			}
+		]
+	},
+	"settings": {
+		"C_Cpp.default.compilerPath": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+		"C_Cpp.default.includePath": [
+			"C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include",
+			"C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include\\c++"
+		],
+		"files.associations": {
+			"iostream": "cpp",
+			"array": "cpp",
+			"atomic": "cpp",
+			"*.tcc": "cpp",
+			"cctype": "cpp",
+			"clocale": "cpp",
+			"cmath": "cpp",
+			"cstdarg": "cpp",
+			"cstddef": "cpp",
+			"cstdint": "cpp",
+			"cstdio": "cpp",
+			"cstdlib": "cpp",
+			"cwchar": "cpp",
+			"cwctype": "cpp",
+			"deque": "cpp",
+			"unordered_map": "cpp",
+			"vector": "cpp",
+			"exception": "cpp",
+			"algorithm": "cpp",
+			"memory": "cpp",
+			"memory_resource": "cpp",
+			"optional": "cpp",
+			"string": "cpp",
+			"string_view": "cpp",
+			"system_error": "cpp",
+			"tuple": "cpp",
+			"type_traits": "cpp",
+			"utility": "cpp",
+			"fstream": "cpp",
+			"initializer_list": "cpp",
+			"iosfwd": "cpp",
+			"istream": "cpp",
+			"limits": "cpp",
+			"new": "cpp",
+			"ostream": "cpp",
+			"sstream": "cpp",
+			"stdexcept": "cpp",
+			"streambuf": "cpp",
+			"typeinfo": "cpp"
+		}
+	}
+}

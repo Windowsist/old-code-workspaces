@@ -1,0 +1,33 @@
+{
+	"folders": [
+		{
+			"name": "acmcoder",
+			"path": "java\\acmcoder"
+		},
+		{
+			"name": "newcoder",
+			"path": "java\\newcoder"
+		},
+		{
+			"name": "leetcode",
+			"path": "java\\leetcode"
+		},
+		{
+			"name": "ConsoleApp",
+			"path": "java\\ConsoleApp"
+		},
+		{
+			"name": "ConsoleTest",
+			"path": "java\\ConsoleTest"
+		},
+		{
+			"name": "SwingApp",
+			"path": "java\\SwingApp"
+		}
+	],
+	"settings": {
+		"java.semanticHighlighting.enabled": true,
+		"java.home": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\Java\\jdk-15",
+		"java.dependency.packagePresentation": "flat"
+	}
+}

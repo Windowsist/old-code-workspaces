@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "java-springframework\\demo"
+		}
+	],
+	"settings": {
+		"java.semanticHighlighting.enabled": true,
+		"java.home": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\Java\\jdk-15",
+		"java.configuration.maven.userSettings": "C:\\Users\\Windowsist\\.m2\\settings.xml",
+		"maven.terminal.useJavaHome": true,
+		"spring.initializr.defaultLanguage": "Java",
+		"spring-boot.ls.java.home": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\Java\\jdk-15",
+		"xml.java.home": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\Java\\jdk-15",
+		"java.configuration.updateBuildConfiguration": "interactive",
+	}
+}

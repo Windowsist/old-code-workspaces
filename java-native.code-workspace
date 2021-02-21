@@ -1,0 +1,123 @@
+{
+	"folders": [
+		{
+			"path": "java-native\\Sample"
+		}
+	],
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"type": "process",
+				"label": "C/C++: g++.exe build java native library",
+				"command": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+				"args": [
+					//"-static",
+					"-I",
+					"C:\\Users\\Windowsist\\AppData\\Local\\Programs\\Java\\jdk-15\\include",
+					"-I",
+					"C:\\Users\\Windowsist\\AppData\\Local\\Programs\\Java\\jdk-15\\include\\win32",
+					"-g",
+					"${file}",
+					"-shared",
+					"-o",
+					"${fileDirname}\\${fileBasenameNoExtension}.dll"
+				],
+				"options": {
+					"cwd": "${fileDirname}"
+				},
+				"problemMatcher": [
+					"$gcc"
+				],
+				"group": "build"
+			},
+			{
+				"type": "process",
+				"label": "C/C++: g++.exe build java native library - release",
+				"command": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+				"args": [
+					//"-static",
+					"-I",
+					"C:\\Users\\Windowsist\\AppData\\Local\\Programs\\Java\\jdk-15\\include",
+					"-I",
+					"C:\\Users\\Windowsist\\AppData\\Local\\Programs\\Java\\jdk-15\\include\\win32",
+					"-O3",
+					"-s",
+					"${file}",
+					"-shared",
+					"-o",
+					"${fileDirname}\\${fileBasenameNoExtension}.dll"
+				],
+				"options": {
+					"cwd": "${fileDirname}"
+				},
+				"problemMatcher": [
+					"$gcc"
+				],
+				"group": "build"
+			},
+			{
+				"type": "process",
+				"label": "C/C++: g++.exe build java native library - win",
+				"command": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+				"args": [
+					//"-static",
+					"-mwindows",
+					"-I",
+					"C:\\Users\\Windowsist\\AppData\\Local\\Programs\\Java\\jdk-15\\include",
+					"-I",
+					"C:\\Users\\Windowsist\\AppData\\Local\\Programs\\Java\\jdk-15\\include\\win32",
+					"-g",
+					"${file}",
+					"-shared",
+					"-o",
+					"${fileDirname}\\${fileBasenameNoExtension}.dll"
+				],
+				"options": {
+					"cwd": "${fileDirname}"
+				},
+				"problemMatcher": [
+					"$gcc"
+				],
+				"group": "build"
+			},
+			{
+				"type": "process",
+				"label": "C/C++: g++.exe build java native library - win - release",
+				"command": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+				"args": [
+					//"-static",
+					"-mwindows",
+					"-I",
+					"C:\\Users\\Windowsist\\AppData\\Local\\Programs\\Java\\jdk-15\\include",
+					"-I",
+					"C:\\Users\\Windowsist\\AppData\\Local\\Programs\\Java\\jdk-15\\include\\win32",
+					"-O3",
+					"-s",
+					"${file}",
+					"-shared",
+					"-o",
+					"${fileDirname}\\${fileBasenameNoExtension}.dll"
+				],
+				"options": {
+					"cwd": "${fileDirname}"
+				},
+				"problemMatcher": [
+					"$gcc"
+				],
+				"group": "build"
+			}
+		]
+	},
+	"settings": {
+		"C_Cpp.default.compilerPath": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+		"C_Cpp.default.includePath": [
+			"C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include",
+			"C:\\Users\\Windowsist\\AppData\\Local\\Programs\\mingw-w64\\x86_64-8.1.0-release-win32-seh-rt_v6-rev0\\mingw64\\lib\\gcc\\x86_64-w64-mingw32\\8.1.0\\include\\c++",
+			"C:\\Users\\Windowsist\\AppData\\Local\\Programs\\Java\\jdk-15\\include",
+			"C:\\Users\\Windowsist\\AppData\\Local\\Programs\\Java\\jdk-15\\include\\win32"
+		],
+		"java.semanticHighlighting.enabled": true,
+		"java.home": "C:\\Users\\Windowsist\\AppData\\Local\\Programs\\Java\\jdk-15"
+	}
+}
